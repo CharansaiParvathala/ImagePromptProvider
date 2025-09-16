@@ -43,8 +43,12 @@ const Index = () => {
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-3">
-              <div className="p-2 bg-gradient-primary rounded-lg shadow-glow">
-                <Sparkles className="h-6 w-6 text-white" />
+              <div className="h-10 w-10 bg-gradient-primary rounded-lg shadow-glow overflow-hidden">
+                  <img
+                    src="/logo.png"
+                    alt="Logo"
+                    className="h-full w-full object-cover"
+                  />
               </div>
               <h1 className="text-2xl font-bold bg-gradient-primary bg-clip-text text-transparent">
                 Prompts
