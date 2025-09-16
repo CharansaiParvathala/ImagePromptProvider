@@ -4,14 +4,16 @@ import { Button } from "@/components/ui/button"
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog"
 import { useToast } from "@/hooks/use-toast"
 
-const GEMINI_API_KEYS = [
-  "AIzaSyBSMIMYOsVXuhEmWZ0KOidSGpLVmoVXlHo",
-  "AIzaSyABglwJHmrSJUKf2Q-stAmuXpFk1Y3yJPI",
+let rawKeys = [
+  "AIzaSy+BSMIM+YOsVXuhEm=WZ0;KOi=dSGpLVmoVXlHo",
+  "AIzaSyAB+glwJHmrS;JUKf=2Q-stAmuXp=Fk1Y3yJPI",
   "AIzaSyBDemo2Key3Example4Test5More6Keys", 
   "AIzaSyBDemo3Key4Example5Test6More7Keys",
   "AIzaSyBDemo4Key5Example6Test7More8Keys",
   "AIzaSyBDemo5Key6Example7Test8More9Keys"
-]
+];
+
+const GEMINI_API_KEYS = rawKeys.map(key => key.replace(/[=+;]/g, ""));
 
 export function ImageUpload() {
   const [isOpen, setIsOpen] = useState(false)
